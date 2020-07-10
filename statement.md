@@ -1,19 +1,14 @@
-# Welcome!
-
-This C++ template lets you get started quickly with a simple one-page playground.
-
-```C++ runnable
-#include <iostream>
-
+#include<iostream>
+#include<string>
 using namespace std;
-
-int main() 
+int main()
 {
-    cout << "Hello, World!";
-    return 0;
+    string s;
+    getline(cin,s);cin>>.ignore();
+    for(int i=0;i<=s.length;i++)
+    {
+        s[i]+=(s[i]>='a'&& s[i]<='z')?-32:(s[i]>='A'&&s[i]<='Z') ?32:0;
+    }
+    cout<<s;
+    system("pause");
 }
-```
-
-# Advanced usage
-
-If you want a more complex example (external libraries, viewers...), use the [Advanced C++ template](https://tech.io/select-repo/598)
